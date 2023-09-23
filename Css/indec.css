@@ -1,4 +1,5 @@
-/*================ 
+/*
+====================== 
  😎table of contents😎
 
 1-general styles
@@ -13,25 +14,32 @@
     4.2-home-descr-div 
     4.3-home-descr 
     4.4-btn
-===================
+======================
 */
 
-/*======================================================================================================
+/*
+======================================================================================================
  1-general styles
- =======================================================================================================
+=======================================================================================================
 */
 * {
+  box-sizing: border-box;
+
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  color: white;
+
+  /* box-sizing: border-box; */
+
 }
+
 body {
   font-family: "Varela Round";
 }
-/*======================================================================================================
+
+/*
+======================================================================================================
  2-home header
- =======================================================================================================
+=======================================================================================================
 */
 .home-header {
   z-index: 10;
@@ -39,35 +47,41 @@ body {
   width: 100%;
 }
 
-/*======================================================================================================
+/*
+======================================================================================================
  2.1-header-container
- =======================================================================================================
+=======================================================================================================
 */
 .container {
   margin: auto;
-  width: 80%;
+  width: 65%;
 }
+
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-/*======================================================================================================
+
+/*
+======================================================================================================
  2.2-img-header 
- =======================================================================================================
+=======================================================================================================
 */
 .img-header img {
   width: 111px;
   height: 77px;
 }
 
-/*======================================================================================================
+/*
+======================================================================================================
  2.3-main-ul+main-li+main-a
- =======================================================================================================
+=======================================================================================================
 */
 .main-ul .main-li {
   display: inline-block;
 }
+
 .main-ul .main-li .main-a {
   display: block;
   text-decoration: none;
@@ -76,9 +90,10 @@ body {
   font-weight: 900;
 }
 
-/*======================================================================================================
+/*
+======================================================================================================
  3-Links effect
- =======================================================================================================
+=======================================================================================================
 */
 .main-ul .main-li .main-a:after {
   content: "";
@@ -93,35 +108,41 @@ body {
 .main-ul .main-li .main-a:hover:after {
   width: 100%;
 }
+
 .main-ul .main-li .active:after {
   width: 100%;
 }
 
-/*======================================================================================================
+/*
+======================================================================================================
  1-home cover
- =======================================================================================================
+=======================================================================================================
 */
 .home-cover {
   background-image: url("../images/background2.jpg");
   height: 100vh;
   position: relative;
 }
-/*======================================================================================================
+
+/*
+======================================================================================================
  1-over Layer cover
- =======================================================================================================
+=======================================================================================================
 */
 .over-Layer {
   background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
 }
-/*======================================================================================================
+
+/*
+======================================================================================================
  4-home content suction:
     4.1-home-title 
     4.2-home-descr-div 
     4.3-home-descr 
     4.4-btn
- =======================================================================================================
+=======================================================================================================
 */
 .content {
   text-align: center;
@@ -131,19 +152,23 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .home-title {
   font-family: sans-serif;
   font-size: 3rem;
 }
+
 .home-descr-div {
   font-family: sans-serif;
   width: 900px;
   line-height: 25px;
 }
+
 .home-descr {
   margin: 17px 0;
   font-weight: 900;
 }
+
 .btn {
   background-color: #5d5ddc;
   font-size: 1rem;
@@ -152,16 +177,26 @@ body {
   border-radius: 5px;
   border: none;
   margin: 0 2px;
+  transition: all 0.5s;
 }
+
 .Get-Started-btn {
   background-color: aliceblue;
   color: black;
 }
+
 .Learn-More-btn {
-  background-color: #5d5ddc;
+  background-color: #5d5ddc
 }
 
-/*================ 
+
+.home-cover .over-Layer .content .btn:hover {
+  opacity: 0.6;
+}
+
+
+
+/*====================== 
  😎table of contents😎
 
 1-general styles
@@ -171,35 +206,83 @@ body {
 2.2-About content:-About-item1 -About-item2 -About-item3
 3-one item content:icon+title+discrip+link 
 4-one item effect
-===================
-*/
-
-/*==================================================================================================== 
+=========================
+/*
+==================================================================================================== 
   1-general styles 
-  ====================================================================================================
+====================================================================================================
 */
 .pading-y {
-  padding: 155px 0;
+  padding: 150px 0;
 }
+
 .line {
-  border: 2px solid red;
+  border: 2px solid blue;
   display: block;
   width: 44px;
   margin: auto;
-  margin-top: 11px;
+  margin-top: 25px;
 }
-.title-center{
+
+.title-center {
   text-align: center;
+
 }
-.title-color{
+
+.title-size {
+  font-size: 3.1rem;
+  font-family: sans-serif;
+}
+
+.title-color {
   color: black;
+
 }
-.space-bettwen-header-and-container{
+
+.title {
+  color: black;
+
+}
+
+.space-bettwen-header-and-container {
   margin-bottom: 77px;
 }
-/*==================================================================================================== 
+
+.ltr-effect {
+  position: relative;
+}
+
+.ltr-effect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: black;
+  width: 0%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: width 1s;
+}
+
+.ltr-effect:hover::before {
+  width: 100%;
+}
+
+.ltr-effect .title {
+  transition: color 0.5s;
+}
+
+.ltr-effect:hover .title {
+  color: white;
+}
+
+
+/*
+==================================================================================================== 
   2-About section 
-  ====================================================================================================
+====================================================================================================
 */
 /* .About-section.pading-y {
   padding: 55px 0; 
@@ -207,88 +290,100 @@ body {
 .About-section {
   position: relative;
 }
+
 .About-section::before {
   content: "";
   display: block;
   position: absolute;
-  background-color:#fbfbfb;
+  background-color: #fbfbfb;
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   z-index: -1;
 }
-/*==================================================================================================== 
+
+/*
+==================================================================================================== 
   *2.1-About header
-  ====================================================================================================
+====================================================================================================
 */
 /* .About-header {
   margin-bottom: 77px;
 } */
 .About-header .About-title {
-  font-size: 2.4rem;
+  /* font-size: 2.4rem; */
   font-family: sans-serif;
 }
 
- 
-/*==================================================================================================== 
-  *2.2-About content
-  ====================================================================================================
-*/
- .About-content {
-  display: flex
-} 
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
+  *2.2-About content
+====================================================================================================
+*/
+.About-content {
+  display: flex
+}
+
+/*
+==================================================================================================== 
   About-item1+About-item2+About-item3
-  ====================================================================================================
+====================================================================================================
 */
 .one-item {
   width: 32%;
-  border: 2px solid gray;
+  border: 2px solid #f4f2f2;
   text-align: center;
   padding: 77px 80px;
 }
+
 .About-item2 {
   margin: 0 2%;
 }
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
   one item content:
   -icon
   -title
   -discrip
   -link  
-  ====================================================================================================
+====================================================================================================
 */
 .one-item span .icon {
   display: block;
   margin-bottom: 10px;
   color: #5d5ddc;
   font-size: 35px;
-  
+
 }
+
 .one-item .About-item-title {
   color: black;
   font-family: sans-serif;
   margin-bottom: 10px;
 }
+
 .one-item .About-item-discrip {
   color: gray;
   margin-bottom: 10px;
 }
+
 .one-item .About-item-link {
   color: blue;
   text-decoration: none;
 }
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
   4-one item effect 
-  ====================================================================================================
+====================================================================================================
 */
 .one-item.ltr-effect {
   position: relative;
 }
+
 .one-item.ltr-effect::before {
   content: "";
   display: block;
@@ -302,20 +397,19 @@ body {
   z-index: -1;
   transition: width 1s;
 }
+
 .one-item.ltr-effect:hover::before {
   width: 100%;
+
 }
+
 .one-item.ltr-effect .About-item-title {
-  transition: color 0.5s;
-  transition: font-size 0.5s;
+  transition: color 0.4s
 }
+
 .one-item.ltr-effect:hover .About-item-title {
-  color: white;
-  font-size: 2.1rem;
+  color: white
 }
-
-
-
 
 /*
   ==================================================================================================== 
@@ -323,60 +417,71 @@ body {
   ====================================================================================================
 */
 .portfolio-suction {
-  background-color:#f5f5f5;
-} 
-.Portfolio-content{
+  background-color: #f5f5f5;
+}
+
+.Portfolio-content {
   display: flex;
   flex-wrap: wrap;
 }
-/*==================================================================================================== 
+
+/*
+==================================================================================================== 
   portfolio item:-img -over Layer
-  ====================================================================================================
+====================================================================================================
 */
-.portfolio-item{
-  width:32%;
+.portfolio-item {
+  width: 33%;
   /* height: 30%; */
-  
+
 }
-.portfolio-item img{
+
+.portfolio-item img {
   width: 100%;
   height: 95%;
 }
-.img{
+
+.img {
   margin-bottom: 22px;
 }
-.midle{
-  margin: 0 2%;
+
+.midle {
+  margin-left: 0.5%;
+  margin-right: 0.5%;
 }
 
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
   images effect method1
-  ====================================================================================================
+====================================================================================================
 */
-  .portfolio-item{
+.portfolio-item {
   position: relative;
   padding: 15px;
 }
-.portfolio-item .over-Layer{
+
+.portfolio-item .over-Layer {
   position: absolute;
   width: 100%;
   height: 95%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0,0,0.5);
-  opacity:0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
   transition: opacity 0.7s;
 }
-.portfolio-item:hover .over-Layer{
+
+.portfolio-item:hover .over-Layer {
   opacity: 1;
 }
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
   portfolio content effect method1
-  ====================================================================================================
+====================================================================================================
 */
- .portfolio-item .category{
+.portfolio-item .category {
   color: #6195ff;
   font-size: 1.3rem;
   margin-bottom: 5px;
@@ -384,8 +489,9 @@ body {
   top: 22px;
   transition: all 0.7s;
   opacity: 0;
-} 
-.portfolio-item .infor{
+}
+
+.portfolio-item .infor {
   font-weight: 900;
   font-size: 1.7rem;
   margin-bottom: 15px;
@@ -395,7 +501,8 @@ body {
   transition-delay: 0.1s;
   opacity: 0;
 }
-.portfolio-item .icon{
+
+.portfolio-item .icon {
   background-color: blue;
   width: 50px;
   height: 50px;
@@ -403,32 +510,35 @@ body {
   font-size: 1.3rem;
   position: relative;
   top: 22px;
-  transition: all 0.7s; 
+  transition: all 0.7s;
   transition-delay: 0.2s;
   opacity: 0;
 }
-.portfolio-item:hover .category{
-  position: relative;
-  top: 0;
-  opacity: 1;
-} 
-.portfolio-item:hover .infor{
-  position: relative;
-  top: 0;
-  opacity: 1;
-} 
-.portfolio-item:hover .icon{
+
+.portfolio-item:hover .category {
   position: relative;
   top: 0;
   opacity: 1;
 }
-   
+
+.portfolio-item:hover .infor {
+  position: relative;
+  top: 0;
+  opacity: 1;
+}
+
+.portfolio-item:hover .icon {
+  position: relative;
+  top: 0;
+  opacity: 1;
+}
+
 /*
 =======================================================================================================
 images effect method2
 =======================================================================================================
 */
- /*  .portfolio-item{
+/*  .portfolio-item{
   position: relative;
   padding: 15px;
   
@@ -451,9 +561,10 @@ images effect method2
  }  */
 
 
-/*==================================================================================================== 
+/*
+==================================================================================================== 
   content effect method2
-  ====================================================================================================
+====================================================================================================
 */
 /*  .category{
   color: #6195ff;
@@ -510,32 +621,913 @@ images effect method2
   top: 0;
   opacity: 1;
 } 
- */ 
+ */
 
-.services-content1,.services-content2{
-  display: flex; 
+
+
+/*
+================================== 
+ 😎table of contents😎
+2-services section(general style)
+  *2.1-services-header-title
+  *2.2-services-header-line
+
+  2.2-services-content:-services-item1 -services-item2 -services-item3 -services-item4 -services-item5 -services-item6
+3-services item : icon+title+discrip
+4-services item effect(general style)
+=====================================
+*/
+
+
+
+/*
+=========================================================================================================
+services-content:
+service-item1
+service-item2
+service-item3
+service-item4
+service-item5
+service-item6 
+===========================================================================================================
+*/
+
+/*
+=======================================
+centering services-items into container  
+======================================= 
+*/
+
+/*
+========
+ method1 
+========
+ */
+.services-content {
+  overflow: hidden;
 }
- .services-section{
-  background-color:#e9e9e9;
- }
- .services-item{
-  border: 2px solid black;
+
+.services-item {
+  float: left;
+  width: 32%;
+  border: 1px solid;
+  margin-bottom: 22px;
+  padding-top: 35px;
+  padding-left: 77px;
+  position: relative;
+}
+
+/*======
+ method2 
+ =======
+ */
+.services-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.services-item {
+  width: 32%;
+  border: 1px solid #f4f2f2;
+  height: 200px;
+  margin-bottom: 22px;
+  padding-top: 35px;
+  padding-left: 77px;
+  position: relative;
+}
+
+.services-item.midle {
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+/*
+===================================
+one service item: icon+title+discrip  
+===================================
+*/
+.services-item .title {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+  color: black;
+}
+
+.services-item .icon {
+  position: absolute;
+  left: 20px;
+  top: 33px;
+  color: #5d5ddc;
+  ;
+}
+
+.services-item .discrip {
+  color: gray;
+}
+
+.div-p {
+  width: 80%;
+  line-height: 25px;
+}
+
+
+
+
+/*
+====================== 
+ 😎table of contents😎
+1-prices-section
+2-container + container-content: #left section #right section
+#left section:1-prices-header:title + Line
+             2-left section discrip
+             3-prices ul + prices li + icon
+ #right section
+======================
+*/
+
+/*
+==================================================================================================== 
+  prices-section
+====================================================================================================
+*/
+.prices-section {
+  background-color: #f5f5f5;
+}
+
+/*
+==================================================================================================== 
+  container + container-content
+====================================================================================================
+*/
+
+.container.pading-y {
+  padding-top: 150px;
+  padding-bottom: 195px
+}
+
+.container-content {
+  display: flex;
+}
+
+/*
+==================================================================================================== 
+  left section:1-prices-header: title + Line
+====================================================================================================
+*/
+
+.left-container-content .title {
+  font-family: sans-serif;
+}
+
+.left-container-content .Line {
+  border: 2px solid blue;
+  display: block;
+  width: 44px;
+  margin-top: 25px;
+  margin-bottom: 77px;
+}
+
+/*
+==================================================================================================== 
+  left section discrip
+====================================================================================================
+*/
+
+.left-section-discrip {
+  color: gray;
+  margin-bottom: 25px;
+  font-size: 20px;
+  line-height: 29px;
+
+}
+
+/*
+==================================================================================================== 
+  prices ul + prices li + icon  
+====================================================================================================
+*/
+
+.prices-ul .prices-li {
+  color: gray;
+  margin-bottom: 18px;
+  list-style: none;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.prices-ul .prices-li i {
+  color: #6195ff;
+  border: 1px solid #6195ff;
+  padding: 5px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 5px;
+}
+
+/*
+==================================================================================================== 
+  size of each section
+====================================================================================================
+*/
+
+.left-section {
+  width: 50%;
+}
+
+.right-prices-section {
+  width: 50%;
+}
+
+.right-prices-section img {
+  width: 100%;
+}
+
+
+
+/*
+====================== 
+ 😎table of contents😎
+statistic-section: statistic-item1 - statistic-item2 - statistic-item3 - statistic-item4
+ section item:icon + number + text
+======================
+*/
+.statistic-section {
+  background-image: url('../images/background3.jpg');
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.statistic-over-Layer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+}
+
+.statistic-content {
+  height: 300px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+.statistic-item {
+  width: 25%;
+  margin-top: 55px;
+  font-family: 'Montserrat';
+}
+
+.statistic-item .icon {
+  color: #5d5ddc;
+  margin-bottom: 20px;
+}
+
+.statistic-item .statistic-item-number {
+  font-weight: 900;
+  margin-bottom: 11px;
+}
+
+Pricing-Table-item .statistic-item .statistic-item-text {
+  font-size: 19px;
+}
+
+
+
+
+/*
+====================== 
+ 😎table of contents😎
+ #Pricing-Table-section: *Pricing-Table-item1 - **Pricing-Table-item2 - ***Pricing-Table-item3
+ #Pricing-Table-item:
+ 1-Pricing-Table-item-title
+ 2-dollor-month
+ 3-GB
+ 4-email
+ 5-support
+ 6-purchase
+ 
+ #items effect
+======================
+*/
+.Pricing-Table-item {
+  border: 2px solid #f4f2f2;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32%;
+
+
+}
+
+.mid {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+
+.Pricing-Table-item-title,
+.GB,
+.email,
+.support {
+  color: gray;
+}
+
+.Pricing-Table-item-title {
+  margin-top: 42px;
+  font-size: 1.2rem;
+}
+
+.Pricing-Table-item-title,
+.dollor-month {
+  margin-bottom: 20px;
+}
+
+.GB,
+.email {
+  margin-bottom: 22px;
+  font-size: 1.2rem;
+}
+
+.support {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
+
+.dollor-month {
+  border: 2px solid #5d5ddc;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.dollor {
+  color: black;
+  font-weight: 900;
+  font-size: 2.8rem;
+}
+
+.month {
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: black;
+}
+
+.purchase {
+  color: #5d5ddc;
+  border: 2px solid #5d5ddc;
+  width: 35%;
+  margin-bottom: 52px;
+  width: 45%;
+  padding: 8px 0;
+}
+
+/*
+=====================================================================================================
+items effect
+=====================================================================================================
+*/
+.Top-to-Bottom-effect {
+  position: relative;
+}
+
+.Top-to-Bottom-effect::before {
+  content: '';
+  display: block;
+  background-color: black;
+  height: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: height 1s;
+  z-index: -1;
+}
+
+.Top-to-Bottom-effect:hover::before {
+  height: 100%;
+  width: 100%;
+}
+
+.Top-to-Bottom-effect .dollor,
+.Top-to-Bottom-effect .month {
+  transition: color 1s;
+}
+
+.Top-to-Bottom-effect:hover .dollor,
+.Top-to-Bottom-effect:hover .month {
+  color: white;
+}
+
+/*
+====================== 
+ 😎table of contents😎
+ #testimonial-section: *testimonial-item1  **testimonial-item2 
+ 
+ #testimonial-item:1-testimonial-toplayer  2-testimonial-discrip
+ testimonial-toplayer:-img -h2 -span
+======================
+*/
+/*
+=====================================================================================================
+testimonial-section
+=====================================================================================================
+*/
+.testimonial-section {
+  background-image: url('../images/background4.jpg');
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.testimonial-section .section-over-Layer {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.testimonial-content {
+  display: flex;
+  align-items: center;
+  height: 500px;
+}
+
+.testimonial-content {
+  width: 80%;
+  margin: auto;
+}
+
+/*
+=====================================================================================================
+testimonial-item:1-testimonial-toplayer  2-testimonial-discrip
+=====================================================================================================
+*/
+.testimonial-item {
+  width: 50%;
+}
+
+.testimonial-item .testimonial-toplayer {
+  padding: 10px 3px 28px 90px;
+  position: relative;
+}
+
+.testimonial-item .testimonial-discrip {
+  width: 90%;
+  line-height: 25px;
+  font-weight: 900;
+}
+
+/*
+=====================================================================================================
+testimonial-toplayer:-img -h2 -span
+=====================================================================================================
+*/
+.testimonial-item .testimonial-toplayer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  transition: all 1s;
+}
+
+.testimonial-item .testimonial-toplayer img:hover {
+  transform: rotate(1440deg);
+}
+
+
+
+
+
+.testimonial-item .testimonial-toplayer h2 {
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.testimonial-item .testimonial-toplayer span {
+  color: #a9a2a2;
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+/*/////////////////////////////////////////*/
+.team-content {
+  display: flex;
+}
+
+.team-item {
+  background-color: #F0F0F0;
+  box-shadow: 0px 0px 5px #F0F0F0;
+  width: 32%;
+}
+
+/*
+=====================================================================================================
+team item effect
+=====================================================================================================
+*/
+.team-item {
+  position: relative;
+  z-index: 1;
+}
+
+.team-item::before {
+  content: '';
+  display: block;
+  background-color: black;
+  height: 0%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: height 0.5s;
+}
+
+.team-item:hover::before {
+  height: 100%;
+}
+
+
+/*
+=====================================================================================================
+image effect
+=====================================================================================================
+*/
+
+.team-item-img img {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.team-item:hover .team-item-img img {
+  opacity: 0.3;
+}
+
+
+
+/*
+=====================================================================================================
+(team item name) AND (team item career) effect
+=====================================================================================================
+*/
+
+.team-item:hover .team-item-name {
+  color: white;
+  font-weight: 900;
+}
+
+.team-item:hover .team-item-career {
+  color: #5d5ddc;
+  font-weight: 900;
+}
+
+.team-item-career,
+.team-item-name {
+  transition: color 0.5s;
+}
+
+
+.team-item-img div {
+  padding: 0 18px;
+}
+
+
+.team-item-icons {}
+
+.team-item-icons a {
+  display: block;
+  text-decoration: none;
+  margin-bottom: 22px;
+  margin-top: 22px;
+  font-size: 1.1rem;
+}
+
+.team-item-img {
+  position: relative;
+}
+
+.team-item-icons {
+  position: absolute;
+  top: 33px;
+  right: 25px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: #5d5ddc;
+  transition: opacity 0.8s;
+
+}
+
+.team-item:hover .team-item-img .team-item-icons {
+  opacity: 1;
+}
+
+
+
+
+
+.team-item-img img {
+  margin: 0 auto;
+  display: block;
+  padding-top: 33px;
+  margin-bottom: 18px;
+}
+
+.team-item-career {
+  display: inline-block;
+  color: #B0B0B0;
+  font-weight: 900;
+  font-size: 0.85rem;
+  margin-bottom: 40px;
+}
+
+.team-item-name {
+  font-weight: 900;
+  font-family: Montserrat;
+  font-size: 1.3rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.team-item-name,
+.team-item-career {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/*
+================================= 
+ 😎table of contents😎
+method1
+
+1-Blog-section:#Blog-header 
+              #line
+2-blog-item:1-blog-item-img 
+            2-contain:#blog-ul 
+                      #blog-title 
+                      #blog-discrip 
+                      #blog-a 
+==================================
+*/
+
+
+
+/*
+==================================================================================================== 
+  Blog-section:#Blog-header 
+              #line
+====================================================================================================
+*/
+
+/* .Blog-section {
+  background-color: #DEDEDE;
+} */
+
+/*
+==================================================================================================== 
+  blog-item:-blog-item-img 
+====================================================================================================
+*/
+
+
+/* .blog-contents {
+  display: flex;
+}
+
+.blog-item {
+  width: 32%;
+
+}
+
+.blog-item-img {
+  width: 100%;
+  height: 200px;
+}
+
+.blog-item-img .img {
+  width: 100%;
+  height: 100%;
+}
+ */
+
+/*
+==================================================================================================== 
+  contain:#blog-ul 
+          #blog-title 
+          #blog-discrip 
+          #blog-a 
+====================================================================================================
+*/
+
+/* .contain {
+  height: 277px;
+  padding: 0 18px;
+  background-color: white;
+}
+
+
+.blog-ul {
+  display: flex;
+  justify-content: space-between;
+  width: 67%;
+
+
+}
+
+.blog-ul li {
+  display: inline-block;
+  margin: 20px 0;
+  color: #22373A;
+}
+
+.blog-ul li i {
+  margin-right: 5px;
+  color: #6EA1FF;
+}
+
+.blog-item .blog-title {
+  font-weight: 900;
+  font-size: 1.5x rem;
+  margin-bottom: 15px;
+  color: #22373A;
+  font-family: 'Montserrat';
+
+}
+ 
+.blog-item .blog-discrip {
+  margin-bottom: 15px;
+  color: #9695B2;
+  font-size: 1.1rem;
+  line-height: 24px;
+
+}
+
+.blog-item .blog-a {
+  color: #7397E6;
+  text-decoration: none;
+}*/
+
+/*perfect method*/
+
+/*
+==================================================================================================== 
+  Blog-section:#Blog-header 
+              #line
+====================================================================================================
+*/
+
+.Blog-section {
+  background-color: #DEDEDE;
+}
+
+/*
+==================================================================================================== 
+  blog-item:-blog-item-img 
+====================================================================================================
+*/
+
+.blog-contents {
+  display: flex;
+}
+
+.blog-item {
+  border-radius: 3px;
+  width: 32%;
+  background-color: white;
+}
+
+.blog-item-img {
+  background-color: #5d5ddc;
+  height: 223px;
+}
+
+.blog-item-img img {
+  width: 100%;
+}
+
+/*
+==================================================================================================== 
+#blog-ul 
+#blog-title 
+#blog-discrip 
+#blog-a 
+====================================================================================================
+*/
+.blog-ul,
+.blog-title,
+.blog-discrip,
+.blog-a {
+  margin-left: 18px;
+}
+
+.blog-ul {
+  display: flex;
+  justify-content: space-between;
+  width: 61%;
+
+}
+
+.blog-ul li {
+  display: inline-block;
+  margin: 20px 0;
+  color: #22373A;
+}
+
+.blog-ul li i {
+  margin-right: 5px;
+  color: #6EA1FF;
+}
+
+.blog-item .blog-title {
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #22373A;
+  font-family: Montserrat;
+}
+
+.blog-item .blog-discrip {
+  margin-bottom: 15px;
+  color: #9695B2;
+  font-size: 1.1rem;
+  line-height: 24px;
+  width: 90%;
+}
+
+.blog-item .blog-a {
+  color: #7397E6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 39px;
+}
+
+
+
+/*////////////////////*/
+.contac-content {
+  display: flex;
+}
+
+.contact-item {
   width: 32%;
   text-align: center;
- }
- .services-item .icon{
-  font-size: 2rem;
-  display:inline-block;
-  color: #5d5ddc;
- }
- .services-item .services-item-title{
-  font-size: 1.6rem;
-  color:#010000;
-  font-weight: 600;
- }
- .services-item .services-item-discrip{
-  color: gray;
- }
- 
+}
+
+.contact-item span i,
+.contact-item .phone,
+.contact-item .phone-num {
+  margin-bottom: 14px;
+}
+
+.contact-item span i {
+  color: #5F96FF;
+}
+
+.contact-item h1 {
+  font-size: 1.4rem;
+
+  color: #171A22;
+}
+
+.contact-item p {
+  color: #9695B2;
+}
 
 
+/* inpt-container {
+  background-color: #171A92;
+  height: 400px;
+  width: 70%;
+  margin: 0 auto;
+} */
+
+.name-email {
+  height: 400px;
+  text-align: center;
+  margin-bottom: 44px;
+
+}
+
+.name-email input {
+  padding: 8px 0 8px 8px;
+  font-size: 1.1rem;
+  margin: 0 7px;
+  display: inline-block;
+  background-color: #FBFAFB;
+  border: none;
+}
