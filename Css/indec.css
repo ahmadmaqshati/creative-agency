@@ -6,7 +6,7 @@
 2-home header
   *2.1-header-container
   *2.2-img-header  
-  *2.3-2.4-main-ul+main-li+main-a
+  *2.3-main-ul+main-li+main-a
 
 3-Links effect
 4-home content suction:
@@ -69,8 +69,10 @@ body {
 =======================================================================================================
 */
 .img-header img {
-  width: 111px;
-  height: 77px;
+  width: 66%;
+  margin-top: 5px;
+
+
 }
 
 /*
@@ -88,6 +90,7 @@ body {
   /* margin: 0 10px; */
   margin: 0 15px;
   font-weight: 900;
+  color: #E7E8EB;
 }
 
 /*
@@ -98,7 +101,7 @@ body {
 .main-ul .main-li .main-a:after {
   content: "";
   display: block;
-  background-color: red;
+  background-color: #6993F1;
   width: 0%;
   height: 3px;
   margin-top: 3px;
@@ -130,7 +133,7 @@ body {
 =======================================================================================================
 */
 .over-Layer {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   height: 100%;
   width: 100%;
 }
@@ -156,6 +159,7 @@ body {
 .home-title {
   font-family: sans-serif;
   font-size: 3rem;
+  color: #FEFFFF;
 }
 
 .home-descr-div {
@@ -166,7 +170,8 @@ body {
 
 .home-descr {
   margin: 17px 0;
-  font-weight: 900;
+  font-weight: 500;
+  color: #FFF5DB;
 }
 
 .btn {
@@ -181,12 +186,13 @@ body {
 }
 
 .Get-Started-btn {
-  background-color: aliceblue;
-  color: black;
+  background-color: #FEFFFF;
+  color: #1F1E3E;
 }
 
 .Learn-More-btn {
-  background-color: #5d5ddc
+  background-color: #5d5ddc;
+  color: #E3F4FC;
 }
 
 
@@ -217,11 +223,11 @@ body {
 }
 
 .line {
-  border: 2px solid blue;
+  border: 2px solid #97B0F2;
   display: block;
   width: 44px;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .title-center {
@@ -235,14 +241,14 @@ body {
 }
 
 .title-color {
-  color: black;
+  color: #23170F;
 
 }
 
-.title {
+/* .title {
   color: black;
 
-}
+} */
 
 .space-bettwen-header-and-container {
   margin-bottom: 77px;
@@ -335,7 +341,8 @@ body {
   width: 32%;
   border: 2px solid #f4f2f2;
   text-align: center;
-  padding: 77px 80px;
+  /*  padding: 77px 80px; */
+  padding: 33px 0;
 }
 
 .About-item2 {
@@ -353,26 +360,36 @@ body {
 */
 .one-item span .icon {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   color: #5d5ddc;
   font-size: 35px;
 
 }
 
-.one-item .About-item-title {
-  color: black;
+.one-item .title {
+  color: #190E1F;
   font-family: sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+.About-item-discrip-div {
+  width: 81%;
+  margin: 0 auto;
 }
 
 .one-item .About-item-discrip {
   color: gray;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  color: #535357;
+
+
 }
 
 .one-item .About-item-link {
   color: blue;
   text-decoration: none;
+  display: block;
+  margin-bottom: 33px;
 }
 
 /*
@@ -411,17 +428,20 @@ body {
   color: white
 }
 
+
+
+
 /*
   ==================================================================================================== 
   portfolio suction 
   ====================================================================================================
 */
 .portfolio-suction {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5
 }
 
 .Portfolio-content {
-  display: flex;
+  display: fleX;
   flex-wrap: wrap;
 }
 
@@ -432,8 +452,6 @@ body {
 */
 .portfolio-item {
   width: 33%;
-  /* height: 30%; */
-
 }
 
 .portfolio-item img {
@@ -494,6 +512,7 @@ body {
 .portfolio-item .infor {
   font-weight: 900;
   font-size: 1.7rem;
+  color: #F1F1ED;
   margin-bottom: 15px;
   position: relative;
   top: 22px;
@@ -503,7 +522,8 @@ body {
 }
 
 .portfolio-item .icon {
-  background-color: blue;
+  background-color: #4E6FC0;
+  color: #A3B1D0;
   width: 50px;
   height: 50px;
   line-height: 50px;
@@ -691,8 +711,8 @@ centering services-items into container
   border: 1px solid #f4f2f2;
   height: 200px;
   margin-bottom: 22px;
-  padding-top: 35px;
-  padding-left: 77px;
+  padding-top: 32px;
+  padding-left: 67px;
   position: relative;
 }
 
@@ -707,21 +727,24 @@ one service item: icon+title+discrip
 ===================================
 */
 .services-item .title {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 22px;
-  color: black;
+  color: #251F1E;
+  font-family: Montserrat;
+
 }
 
 .services-item .icon {
   position: absolute;
   left: 20px;
   top: 33px;
-  color: #5d5ddc;
-  ;
+  color: #5E94FF;
 }
 
 .services-item .discrip {
   color: gray;
+  width: 92%;
+  font-size: 0.9rem;
 }
 
 .div-p {
@@ -778,12 +801,8 @@ one service item: icon+title+discrip
   font-family: sans-serif;
 }
 
-.left-container-content .Line {
-  border: 2px solid blue;
-  display: block;
-  width: 44px;
-  margin-top: 25px;
-  margin-bottom: 77px;
+.left-container-content .left-Line {
+  position: absolute;
 }
 
 /*
@@ -794,9 +813,10 @@ one service item: icon+title+discrip
 
 .left-section-discrip {
   color: gray;
-  margin-bottom: 25px;
-  font-size: 20px;
+  margin-bottom: 18px;
+  font-size: 16px;
   line-height: 29px;
+  width: 75%;
 
 }
 
@@ -810,8 +830,8 @@ one service item: icon+title+discrip
   color: gray;
   margin-bottom: 18px;
   list-style: none;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .prices-ul .prices-li i {
@@ -878,17 +898,19 @@ statistic-section: statistic-item1 - statistic-item2 - statistic-item3 - statist
 }
 
 .statistic-item .icon {
-  color: #5d5ddc;
+  color: #5787E6;
   margin-bottom: 20px;
 }
 
 .statistic-item .statistic-item-number {
   font-weight: 900;
   margin-bottom: 11px;
+  color: #D8D8D3;
 }
 
-Pricing-Table-item .statistic-item .statistic-item-text {
-  font-size: 19px;
+.statistic-item .statistic-item-text {
+  font-size: 15px;
+  color: #DADADA;
 }
 
 
@@ -932,11 +954,6 @@ Pricing-Table-item .statistic-item .statistic-item-text {
 .email,
 .support {
   color: gray;
-}
-
-.Pricing-Table-item-title {
-  margin-top: 42px;
-  font-size: 1.2rem;
 }
 
 .Pricing-Table-item-title,
@@ -1026,6 +1043,18 @@ items effect
   color: white;
 }
 
+.Pricing-Table-item-title {
+  margin-top: 42px;
+  font-size: 1.2rem;
+  transition: color 0.5s;
+}
+
+.Top-to-Bottom-effect:hover .Pricing-Table-item-title {
+  color: #5C77C1;
+}
+
+
+
 /*
 ====================== 
  😎table of contents😎
@@ -1086,6 +1115,7 @@ testimonial-item:1-testimonial-toplayer  2-testimonial-discrip
   width: 90%;
   line-height: 25px;
   font-weight: 900;
+  color: #A19FA2;
 }
 
 /*
@@ -1106,18 +1136,16 @@ testimonial-toplayer:-img -h2 -span
 }
 
 
-
-
-
 .testimonial-item .testimonial-toplayer h2 {
   font-family: Montserrat;
   font-size: 1.4rem;
   font-weight: 900;
   margin-bottom: 8px;
+  color: #FBFAFB;
 }
 
 .testimonial-item .testimonial-toplayer span {
-  color: #a9a2a2;
+  color: #4D5796;
   font-size: 0.9rem;
   font-weight: 900;
 }
@@ -1174,7 +1202,7 @@ image effect
 }
 
 .team-item:hover .team-item-img img {
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 
@@ -1214,6 +1242,7 @@ image effect
   margin-bottom: 22px;
   margin-top: 22px;
   font-size: 1.1rem;
+  color: #DAD6D5;
 }
 
 .team-item-img {
@@ -1233,6 +1262,7 @@ image effect
 
 .team-item:hover .team-item-img .team-item-icons {
   opacity: 1;
+
 }
 
 
@@ -1273,8 +1303,6 @@ image effect
 /*
 ================================= 
  😎table of contents😎
-method1
-
 1-Blog-section:#Blog-header 
               #line
 2-blog-item:1-blog-item-img 
@@ -1285,7 +1313,11 @@ method1
 ==================================
 */
 
-
+/*
+========
+method1
+========
+*/
 
 /*
 ==================================================================================================== 
@@ -1382,7 +1414,11 @@ method1
   text-decoration: none;
 }*/
 
-/*perfect method*/
+/*
+==============
+perfect method
+==============
+*/
 
 /*
 ==================================================================================================== 
@@ -1392,7 +1428,7 @@ method1
 */
 
 .Blog-section {
-  background-color: #DEDEDE;
+  background-color: #f5f5f5;
 }
 
 /*
@@ -1481,6 +1517,7 @@ method1
 /*////////////////////*/
 .contac-content {
   display: flex;
+
 }
 
 .contact-item {
@@ -1496,38 +1533,59 @@ method1
 
 .contact-item span i {
   color: #5F96FF;
+  margin-bottom: 20px;
 }
 
 .contact-item h1 {
   font-size: 1.4rem;
-
   color: #171A22;
+  margin-bottom: 20px;
 }
 
 .contact-item p {
   color: #9695B2;
+  margin-bottom: 20px;
 }
 
-
-/* inpt-container {
-  background-color: #171A92;
-  height: 400px;
-  width: 70%;
-  margin: 0 auto;
-} */
-
-.name-email {
-  height: 400px;
+/*
+===========
+inputs
+===========
+*/
+.inputs-div {
   text-align: center;
-  margin-bottom: 44px;
-
 }
 
-.name-email input {
-  padding: 8px 0 8px 8px;
+.inputs-div .inp-commen,
+.inputs-div .inp-difrent {
+  padding: 8px 0 12px 8px;
   font-size: 1.1rem;
   margin: 0 7px;
   display: inline-block;
   background-color: #FBFAFB;
   border: none;
+}
+
+.inputs-div .inp-difrent {
+  padding: 8px 0 60px 8px;
+}
+
+.inputs-div .massage::placeholder {}
+
+
+
+.inputs-div button {
+  margin-top: 35px;
+  padding: 10px 30px;
+  font-size: 1.1rem;
+  background-color: #5C96FF;
+  color: #F1FBFF;
+  font-weight: 500;
+  border: none;
+  border-radius: 3px;
+  transition: background-color 0.5s;
+}
+
+.inputs-div button:hover {
+  background-color: blueviolet;
 }
